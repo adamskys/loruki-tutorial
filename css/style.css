@@ -193,10 +193,10 @@ input:-webkit-autofill:active {
     transition: 0.4s;
 }
 
-.btn:active {
+/* przetestowac pozniej click na buttonie .btn:active {
     outline: 1px solid var(--btn-color);
     outline-offset: 1px;
-}
+} */
 
 .flex {
     display: flex;
