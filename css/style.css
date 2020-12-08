@@ -168,7 +168,6 @@ input:-webkit-autofill:active {
 .stats-heading {
     max-width: 500px;
     margin: auto;
-    margin-top: 50px;
 }
 
 .stats .grid h3 {
@@ -198,8 +197,4 @@ input:-webkit-autofill:active {
 .cli .grid>*:first-child {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
-}
-
-.gird {
-    test
 }
