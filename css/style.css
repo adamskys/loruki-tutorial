@@ -6,6 +6,7 @@
     --third-color: #333D67;
     --text-color: #d8d8d8;
     --btn-color: #f8ac5c;
+    --darker--primary-color: #171d38;
     /* #3A57FC */
 }
 
@@ -13,7 +14,7 @@
 
 * {
     box-sizing: border-box;
-    padding: 0;
+    S padding: 0;
     border: 0;
 }
 
@@ -150,7 +151,9 @@ input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
 }
 
+
 .wave {
+    background-color: var(--darker--primary-color);
     position: relative;
     z-index: -999;
 }
@@ -158,7 +161,8 @@ input:-webkit-autofill:active {
 /* Stats */
 
 .stats {
-    color: #000;
+    background-color: var(--darker--primary-color);
+    color: var(--text-color);
 }
 
 .stats-heading {
@@ -167,10 +171,13 @@ input:-webkit-autofill:active {
 }
 
 .stats .grid h3 {
-    font-size: 35px;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 0;
 }
 
 .stats .grid p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
+    margin: 0;
 }
