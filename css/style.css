@@ -180,4 +180,21 @@ input:-webkit-autofill:active {
     font-size: 18px;
     font-weight: bold;
     margin: 0;
+    margin-bottom: 50px;
+}
+
+/* Cli */
+
+.cli {
+    background-color: var(--darker--primary-color);
+}
+
+.cli .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid>*:first-child {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
 }
