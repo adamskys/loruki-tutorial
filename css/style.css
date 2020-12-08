@@ -6,6 +6,7 @@
     --third-color: #333D67;
     --text-color: #d8d8d8;
     --btn-color: #f8ac5c;
+    --darker--primary-color: #171d38;
     /* #3A57FC */
 }
 
@@ -37,9 +38,10 @@ a {
     color: var(--text-color);
 }
 
+
 h1,
 h2 {
-    font-weight: 300;
+    font-weight: 600;
     line-height: 1.2;
     margin: 10px 0px;
 }
@@ -86,7 +88,7 @@ img {
 /* Showcase */
 
 .showcase {
-    height: 400px;
+    height: 150px;
     background-color: var(--primary-color);
     color: var(--text-color);
     position: relative;
@@ -110,7 +112,7 @@ img {
 .showcase-form {
     position: relative;
     top: 60px;
-    height: 350px;
+    height: 370px;
     width: 400px;
     padding: 40px;
     z-index: 100;
@@ -126,6 +128,7 @@ img {
     background-color: var(--primary-color);
     color: var(--text-color);
     border: 0;
+    border-radius: 5px;
     /* border-bottom: 1px solid var(--text-color); */
     width: 80%;
     padding: 10px;
@@ -134,7 +137,6 @@ img {
 
 .showcase-form input:focus {
     outline: none;
-
 }
 
 .showcase-form input:focus::placeholder {
@@ -149,58 +151,33 @@ input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* = 1fr 1fr */
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+
+.wave {
+    background-color: var(--darker--primary-color);
+    position: relative;
+    z-index: -999;
 }
 
-/* Utilities */
+/* Stats */
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    overflow: auto;
-    padding: 0 40px;
-}
-
-.card {
-    background: var(--secondary-color);
-    border-radius: 10px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin: 10px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 30px;
-    cursor: pointer;
-    background-color: var(--third-color);
+.stats {
+    background-color: var(--darker--primary-color);
     color: var(--text-color);
-    outline: 1px solid transparent;
-    outline-offset: 3px;
 }
 
-.btn:hover {
-    color: var(--btn-color);
-    outline: 1px solid var(--btn-color);
-    outline-offset: 3px;
-    transition: 0.4s;
+.stats-heading {
+    max-width: 500px;
+    margin: auto;
 }
 
-/* przetestowac pozniej click na buttonie .btn:active {
-    outline: 1px solid var(--btn-color);
-    outline-offset: 1px;
-} */
+.stats .grid h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
 
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+.stats .grid p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
 }
