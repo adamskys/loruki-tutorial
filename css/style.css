@@ -189,12 +189,25 @@ input:-webkit-autofill:active {
     background-color: var(--darker--primary-color);
 }
 
+
+
 .cli .grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    padding-bottom: 30px;
 }
 
 .cli .grid>*:first-child {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
+}
+
+/* Cloud */
+
+.cloud {
+    margin: 0;
+}
+
+.cloud .grid {
+    grid-template-columns: 4fr 3fr;
 }
