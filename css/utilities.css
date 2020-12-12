@@ -37,6 +37,41 @@
     transition: 0.4s;
 }
 
+/* Backgrounds & colored buttons */
+
+.bg-primary,
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.bg-dark,
+.btn-dark {
+    background-color: var(--darker--primary-color);
+    color: var(--text-color);
+}
+
+/* Text sizes */
+
+.lead {
+    font-size: 20px;
+}
+
+.sm {
+    font-size: 1rem;
+}
+
+.md {
+    font-size: 2rem;
+}
+
+.lg {
+    font-size: 3rem;
+}
+
+.xl {
+    font-size: 4rem;
+}
+
 /* przetestowac pozniej click na buttonie .btn:active {
     outline: 1px solid var(--btn-color);
     outline-offset: 1px;
