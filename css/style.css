@@ -245,10 +245,21 @@ input:-webkit-autofill:active {
     transform: translateY(-15px);
 }
 
-/* Footer */
+/* Features */
 
+.features-head img {
+    width: 200px;
+    justify-self: flex-end;
+}
+
+.features-sub-head img {
+    width: 300px;
+    justify-self: flex-end;
+}
+
+/* Footer */
 .footer {
-    background-color: var(--primary-color);
+    background-color: #101427;
 }
 
 .footer nav a:hover {
