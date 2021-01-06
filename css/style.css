@@ -7,6 +7,8 @@
     --text-color: #d8d8d8;
     --btn-color: #f8ac5c;
     --darker--primary-color: #171d38;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
     /* #3A57FC */
 }
 
@@ -52,6 +54,12 @@ p {
 
 img {
     width: 100%;
+}
+
+codre,
+pre {
+    background-color: #333;
+    padding: 10px;
 }
 
 /* Navbar */
@@ -247,7 +255,8 @@ input:-webkit-autofill:active {
 
 /* Features */
 
-.features-head img {
+.features-head img,
+.docs-head img {
     width: 200px;
     justify-self: flex-end;
 }
@@ -257,7 +266,7 @@ input:-webkit-autofill:active {
     justify-self: flex-end;
 }
 
-.features-main .card > i {
+.features-main .card>i {
     margin-right: 20px;
 }
 
@@ -271,6 +280,33 @@ input:-webkit-autofill:active {
 
 .features-main .grid>*:nth-child(2) {
     grid-column: 1 / span 2;
+}
+
+/* Docs */
+
+.docs-main {
+    background-color: var(--darker--primary-color);
+    padding: 30px 0;
+}
+
+.docs-main h3 {
+    margin: 20px 0;
+}
+
+.docs-main .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+.docs-main nav li {
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.docs-main a:hover {
+    font-weight: bold;
 }
 
 /* Footer */
