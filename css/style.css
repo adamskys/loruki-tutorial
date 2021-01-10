@@ -7,6 +7,8 @@
     --text-color: #d8d8d8;
     --btn-color: #f8ac5c;
     --darker--primary-color: #171d38;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
     /* #3A57FC */
 }
 
@@ -19,11 +21,10 @@
 }
 
 /* Set to reset margin again, as * seems to not work for nav styling */
-body {
-    margin: 0;
-}
 
 body {
+    margin: 0;
+    background-color: var(--darker--primary-color);
     font-family: 'Lato', sans-serif;
     color: var(--text-color);
     line-height: 1.6;
@@ -39,11 +40,17 @@ a {
 }
 
 
-h1,
+h1 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 10px;
+}
+
 h2 {
     font-weight: 600;
     line-height: 1.2;
-    margin: 10px 0px;
+    margin-top: 10px;
+    margin-bottom: -20px;
 }
 
 p {
@@ -52,6 +59,17 @@ p {
 
 img {
     width: 100%;
+}
+
+codre,
+pre {
+    background-color: #333;
+    padding: 10px;
+}
+
+.hidden {
+    visibility: hidden;
+    height: 0;
 }
 
 /* Navbar */
@@ -99,7 +117,7 @@ img {
 }
 
 .showcase p {
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 .showcase .grid {
@@ -109,18 +127,23 @@ img {
     gap: 30px;
 }
 
+.showcase-text {
+    animation: slideInFromLeft 1s ease-in;
+}
+
 .showcase-form {
     position: relative;
     top: 60px;
     height: 370px;
     width: 400px;
-    padding: 40px;
+    padding: 30px;
     z-index: 100;
     justify-self: flex-end;
+    animation: slideInFromRight 1s ease-in;
 }
 
 .showcase-form .form-control {
-    margin: 30px 0;
+    margin: 25px 0;
 }
 
 .showcase-form input[type="text"],
@@ -163,6 +186,7 @@ input:-webkit-autofill:active {
 .stats {
     background-color: var(--darker--primary-color);
     color: var(--text-color);
+    animation: slideInFromBottom 1s ease-in;
 }
 
 .stats-heading {
@@ -172,7 +196,7 @@ input:-webkit-autofill:active {
 
 .stats .grid h3 {
     font-size: 30px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 0;
 }
 
@@ -247,7 +271,8 @@ input:-webkit-autofill:active {
 
 /* Features */
 
-.features-head img {
+.features-head img,
+.docs-head img {
     width: 200px;
     justify-self: flex-end;
 }
@@ -257,7 +282,7 @@ input:-webkit-autofill:active {
     justify-self: flex-end;
 }
 
-.features-main .card > i {
+.features-main .card>i {
     margin-right: 20px;
 }
 
@@ -271,6 +296,33 @@ input:-webkit-autofill:active {
 
 .features-main .grid>*:nth-child(2) {
     grid-column: 1 / span 2;
+}
+
+/* Docs */
+
+.docs-main {
+    background-color: var(--darker--primary-color);
+    padding: 30px 0;
+}
+
+.docs-main h3 {
+    margin: 20px 0;
+}
+
+.docs-main .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+.docs-main nav li {
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.docs-main a:hover {
+    font-weight: bold;
 }
 
 /* Footer */
@@ -292,6 +344,47 @@ input:-webkit-autofill:active {
     transition: 0.3s;
 }
 
+/* Animations */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 /* Tablets and under */
 
 @media(max-width: 768px) {
@@ -300,7 +393,9 @@ input:-webkit-autofill:active {
     .showcase .grid,
     .stats .grid,
     .cli .grid,
-    .cloud .grid {
+    .cloud .grid,
+    .features-main .grid,
+    .docs-main .grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
@@ -311,12 +406,14 @@ input:-webkit-autofill:active {
 
     .showcase-text {
         text-align: center;
-        margin-top: 80px;
+        margin-top: 60px;
+        animation: slideInFromTop 1s ease-in;
     }
 
     .showcase-form {
         justify-self: center;
         margin: auto;
+        animation: slideInFromBottom 1s ease-in;
     }
 
     .cli .grid>*:first-child {
@@ -345,13 +442,33 @@ input:-webkit-autofill:active {
         grid-column-end: 3;
         justify-self: center;
     }
+
+    .features-head,
+    .features-sub-head,
+    .docs-head {
+        text-align: center;
+    }
+
+    .features-head img,
+    .features-sub-head img,
+    .docs-head img {
+        justify-self: center;
+    }
 }
 
 /* Mobile */
 
 @media(max-width: 500px) {
+    body {
+        background-color: var(--primary-color);
+    }
+
+    h1 {
+        margin-top: 20px;
+    }
+
     .navbar {
-        height: 120px;
+        height: 140px;
     }
 
     .navbar .flex {
@@ -382,6 +499,16 @@ input:-webkit-autofill:active {
         grid-column-start: 1;
         grid-column-end: 3;
         justify-self: center;
+    }
+
+    .features-head,
+    .docs-head {
+        margin-top: 20px;
+    }
+
+    .features-main .grid>*:first-child,
+    .features-main .grid>*:nth-child(2) {
+        grid-column: 1;
     }
 
 }

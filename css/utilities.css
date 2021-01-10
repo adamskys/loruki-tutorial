@@ -28,6 +28,7 @@
     color: var(--text-color);
     outline: 1px solid transparent;
     outline-offset: 3px;
+    font-family: 'Lato', sans-serif;
 }
 
 .btn:hover {
@@ -44,10 +45,20 @@
     background-color: var(--primary-color);
 }
 
+.bg-secondary {
+    background-color: #1b2344;
+}
+
 .bg-dark,
 .btn-dark {
     background-color: var(--darker--primary-color);
     color: var(--text-color);
+}
+
+/* Text colors */
+
+.text-primary {
+    color: var(--btn-color);
 }
 
 /* Text sizes */
@@ -79,6 +90,29 @@
 
 .text-center {
     text-align: center;
+}
+
+/* Alert */
+
+.alert {
+    background-color: var(--third-color);
+    padding: 10px 20px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.alert i {
+    margin-right: 10px;
+}
+
+.alert-success {
+    background-color: var(--success-color);
+    color: rgb(19, 19, 19);
+}
+
+.alert-error {
+    background-color: var(--error-color);
+    color: rgb(19, 19, 19);
 }
 
 .flex {
